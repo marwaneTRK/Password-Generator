@@ -8,16 +8,14 @@ Perfect for learning DOM manipulation, basic UI design, and JavaScript logic.
 
 ## 🚀 Features
 
-- Generate strong random passwords
-- Choose password length
-- Include/exclude:
-  - Uppercase letters
-  - Lowercase letters
-  - Numbers
-  - Symbols
-- One-click copy to clipboard
-- Fully responsive design
-- Lightweight and fast
+Set custom **password length**
+
+- Toggle **numbers** on/off
+- Toggle **symbols** on/off
+- Always includes uppercase & lowercase (optional to change)
+- **One-click copy** to clipboard
+- Smooth **light/dark mode**
+- Fully responsive and lightweight
 
 ---
 
