@@ -48,6 +48,19 @@ result.textContent = res
 
 }
 
+function copyText() {
+    const text = document.querySelector(".result").textContent;
+
+    if (text === "") return; // nothing to copy
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert("Copied!");
+        })
+        .catch(err => {
+            console.log("Copy failed", err);
+        });
+}
 
 
 
