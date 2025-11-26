@@ -5,7 +5,7 @@
 }
 
 body{
-    background: rgb(51, 51, 51);
+    background: black;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,7 +22,8 @@ body{
     flex-direction: column;
     gap: 40px;
     text-align: left;
-    padding :  100px 70px
+    padding :  100px 70px;
+    border-radius :50px;
 }
 h1{
     color: white;
@@ -59,7 +60,7 @@ p {
 .copy{
     background-color: #273549;
         color: #10B981;
-
+    width: 100%;
 
 }
 hr{
@@ -68,6 +69,33 @@ hr{
 
 .btns{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .inputs{
+} */
+
+.inputBox {
+    padding: 0 0 10px 0;
+}
+
+.inputBox label{
+    color: white;
+    font-weight: 700;
+}
+
+.inputBox input{
+    width: 40px;
+    text-align: center;
+}
+
+.inOne{
+    display: flex;
+    justify-content: space-between;
 }
