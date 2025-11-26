@@ -121,15 +121,4 @@ git clone https://github.com/yourusername/password-generator.git
 📝 License
 
 This project is free to use and modify.
-
-
----
-
-If you want, I can also:
-
-✅ Make you a GitHub project thumbnail
-✅ Improve your repo description
-✅ Create version tags (v1.0.0)
-
-Just say the word.
 ```
