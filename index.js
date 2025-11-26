@@ -20,7 +20,6 @@ if (size.value > max) size.value = max
 
 })
 
-// fitler 52 index
 function hope(){
 
 let validSize = parseInt(size.value)
@@ -51,7 +50,7 @@ result.textContent = res
 function copyText() {
     const text = document.querySelector(".result").textContent;
 
-    if (text === "") return; // nothing to copy
+    if (text === "") return; 
 
     navigator.clipboard.writeText(text)
         .then(() => {
@@ -70,7 +69,7 @@ function copyText() {
 
 
 
-
+// Canva animation below !!
 
 
         var c = document.getElementById("c");

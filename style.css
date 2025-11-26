@@ -107,7 +107,6 @@ hr{
 }
 
 
-/* PHONE + SMALL DEVICES */
 @media (max-width: 768px) {
   .container {
     width: 90vw;
@@ -138,7 +137,6 @@ hr{
   }
 }
 
-/* VERY SMALL PHONES */
 @media (max-width: 480px) {
   .container {
     padding: 40px 20px;
@@ -158,7 +156,6 @@ hr{
   }
 }
 
-/* TABLETS */
 @media (max-width: 1024px) {
   .container {
     width: 60vw;
