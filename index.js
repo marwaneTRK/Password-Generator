@@ -6,14 +6,26 @@ const generatorBtn = document.querySelector(".gen")
 const result = document.querySelector(".result")
 let res = ""
 let state = false
+const size = (document.getElementById('lengthInput')) 
+const box = document.getElementById('box')
 
+size.addEventListener('input', ()=>{
+const min = parseInt(size.min)
+const max = parseInt(size.max)
+
+if (size.value < min) size.value = min
+if (size.value > max) size.value = max
+
+})
+
+// fitler 52 index
 function hope(){
 // state = !state;
-const size = parseInt(document.getElementById('lengthInput').value) 
+let validSize = parseInt(size.value)
 
   state = !state;
-    if (size > 0 && state) {
-        for (let i = 0; i < size; i++) {
+    if (validSize > 0 && state) {
+        for (let i = 0; i < validSize; i++) {
     res +=  characters[Math.floor(Math.random() * characters.length)]   
 }
   state = !state;
@@ -26,6 +38,5 @@ if (state === false){
 }
 
 }
-
 
 console.log(res);
