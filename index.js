@@ -1,77 +1,54 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?", 
-"/"];
 
+        const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
 
+        const generatorBtn = document.querySelector(".gen");
+        const result = document.querySelector(".result");
+        const size = document.getElementById('lengthInput');
+        const box = document.getElementById('box');
 
-const generatorBtn = document.querySelector(".gen")
-const result = document.querySelector(".result")
+        size.addEventListener('input', () => {
+            const min = parseInt(size.min);
+            const max = parseInt(size.max);
 
-let res = ""
-
-const size = (document.getElementById('lengthInput')) 
-const box = document.getElementById('box')
-
-size.addEventListener('input', ()=>{
-const min = parseInt(size.min)
-const max = parseInt(size.max)
-
-if (size.value < min) size.value = min
-if (size.value > max) size.value = max
-
-})
-
-function hope(){
-
-let validSize = parseInt(size.value)
-
-  
-    if (validSize > 0  && !box.checked) {
-        for (let i = 0; i < validSize; i++) {
-    res +=  characters[Math.floor(Math.random() * characters.length)]   
-}
-result.textContent = res
-
-}else if (validSize > 0  && box.checked ){
-        for (let i = 0; i < validSize; i++) {
-    res +=  characters[Math.floor(Math.random() * 52)] 
-
-}
-result.textContent = res
-
-}else if(validSize ===0){
-    res =""
-}
-
-    res = " "
-
-
-}
-
-function copyText() {
-    const text = document.querySelector(".result").textContent;
-
-    if (text === "") return; 
-
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            alert("Copied!");
-        })
-        .catch(err => {
-            console.log("Copy failed", err);
+            if (size.value < min) size.value = min;
+            if (size.value > max) size.value = max;
         });
-}
 
+        function hope() {
+            let validSize = parseInt(size.value);
+            let res = "";
 
+            if (validSize > 0 && !box.checked) {
+                for (let i = 0; i < validSize; i++) {
+                    res += characters[Math.floor(Math.random() * 52)];
+                }
+                result.textContent = res;
+            } else if (validSize > 0 && box.checked) {
+                for (let i = 0; i < validSize; i++) {
+                    res += characters[Math.floor(Math.random() * characters.length)];
+                }
+                result.textContent = res;
+            } else if (validSize === 0) {
+                result.textContent = "";
+            }
+        }
 
+        function copyText() {
+            const text = document.querySelector(".result").textContent;
 
+            if (text === "") return;
 
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    alert("Copied!");
+                })
+                .catch(err => {
+                    console.log("Copy failed", err);
+                });
+        }
 
-
-
-
-// Canva animation below !!
-
-
+        // Canvas animation
+        
         var c = document.getElementById("c");
         var ctx = c.getContext("2d");
 
