@@ -33,19 +33,7 @@
             }
         }
 
-        function copyText() {
-            const text = document.querySelector(".result").textContent;
-
-            if (text === "") return;
-
-            navigator.clipboard.writeText(text)
-                .then(() => {
-                    alert("Copied!");
-                })
-                .catch(err => {
-                    console.log("Copy failed", err);
-                });
-        }
+        
 
         // Canvas animation
         
@@ -86,3 +74,26 @@
         }
 
         setInterval(draw, 35);
+
+
+        function copyText() {
+    const text = document.querySelector(".result").textContent;
+
+    if (text === "" || text === "Click Generate to create password") return;
+
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            const btn = document.querySelector(".result");
+            const originalText = btn.textContent;
+            btn.textContent = "Copied!";
+            btn.classList.add("copied");
+            
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove("copied");
+            }, 1000);
+        })
+        .catch(err => {
+            console.log("Copy failed", err);
+        });
+}

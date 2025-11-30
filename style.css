@@ -107,7 +107,11 @@
             flex-direction: column;
             gap: 20px;
         }
-
+        .copied {
+              background-color: #059669 !important;
+              transition: background-color 0.3s ease;
+              color: white;
+          }
         .inputs {
             display: flex;
             flex-direction: column;
